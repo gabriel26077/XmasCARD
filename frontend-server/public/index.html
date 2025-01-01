@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Usuários</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    form input {
+      margin: 5px;
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gerenciador de Usuários</h1>
+  <h2>Adicionar Usuário</h2>
+  <form id="user-form">
+    <input type="text" id="nome" placeholder="Nome" required>
+    <input type="text" id="id_cartao" placeholder="ID Cartão" required>
+    <input type="number" id="creditos" placeholder="Créditos" required>
+    <button type="submit">Adicionar</button>
+    <button type="button" id="hardwareButton">Adicionar Via Hardware</button>
+  </form>
+
+  <h2>Lista de Usuários</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>ID Cartão</th>
+        <th>Créditos</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="user-list">
+    </tbody>
+  </table>
+</body>
+<script src="script.js"></script>
+</html>
